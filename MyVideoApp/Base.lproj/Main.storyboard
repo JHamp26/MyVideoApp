@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Video-->
+        <scene sceneID="zMg-EC-3N4">
+            <objects>
+                <tableViewController id="Gyb-U0-tfI" customClass="VideoTableViewController" customModule="MyVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="xaW-Po-pYj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="nId-ZR-iRq" detailTextLabel="2t6-nP-ZXo" style="IBUITableViewCellStyleValue1" id="UFW-XV-wf9">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UFW-XV-wf9" id="nbS-ZH-8o8">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nId-ZR-iRq">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2t6-nP-ZXo">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="video" id="lfB-Hc-rQx"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Gyb-U0-tfI" id="XmL-5X-yQM"/>
+                            <outlet property="delegate" destination="Gyb-U0-tfI" id="cSq-FU-0x3"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Video" id="917-7y-gyv">
+                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="NAG-Xh-Yns">
+                            <connections>
+                                <action selector="btnBack:" destination="Gyb-U0-tfI" id="EBl-Jb-FdB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="hHU-9f-Q1Y">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="rTI-mp-hWR"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a69-rP-HaG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968" y="433"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a60-gQ-4I1">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Video" id="SaP-xI-AtS">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Bbo-E0-EAH">
+                                            <connections>
+                                                <action selector="btnBack:" destination="BYZ-38-t0r" id="60X-n7-vKN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="HXy-nr-VHn">
+                                            <connections>
+                                                <action selector="btnSave:" destination="BYZ-38-t0r" id="ILF-KZ-oq1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Date For Video" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J6N-kM-bgE">
+                                <rect key="frame" x="100" y="71" width="400" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2e-Yd-kuq">
+                                <rect key="frame" x="317" y="147" width="30" height="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fMf-kI-CAX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GU1-Sz-fJJ">
+                                <rect key="frame" x="450" y="147" width="50" height="30"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnRecord:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pBm-tT-HGD"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name For Video" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kXN-Iy-UHR">
+                                <rect key="frame" x="100" y="109" width="400" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SxX-P9-riC"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a60-gQ-4I1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3fv-IP-9gy"/>
+                            <constraint firstItem="J6N-kM-bgE" firstAttribute="centerX" secondItem="a60-gQ-4I1" secondAttribute="centerX" id="8n7-1z-4iM"/>
+                            <constraint firstItem="a60-gQ-4I1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8xx-XF-7Cl"/>
+                            <constraint firstItem="kXN-Iy-UHR" firstAttribute="top" secondItem="J6N-kM-bgE" secondAttribute="bottom" constant="8" symbolic="YES" id="E2n-rP-uay"/>
+                            <constraint firstItem="r2e-Yd-kuq" firstAttribute="top" secondItem="kXN-Iy-UHR" secondAttribute="bottom" constant="8" symbolic="YES" id="GPT-se-5rq"/>
+                            <constraint firstItem="J6N-kM-bgE" firstAttribute="trailing" secondItem="kXN-Iy-UHR" secondAttribute="trailing" id="dKL-gu-VhK"/>
+                            <constraint firstAttribute="trailing" secondItem="r2e-Yd-kuq" secondAttribute="trailing" constant="253" id="eP6-fS-tGD"/>
+                            <constraint firstItem="J6N-kM-bgE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="84" id="kpQ-8p-Riy"/>
+                            <constraint firstAttribute="trailing" secondItem="a60-gQ-4I1" secondAttribute="trailing" id="myc-Up-IKC"/>
+                            <constraint firstItem="r2e-Yd-kuq" firstAttribute="baseline" secondItem="GU1-Sz-fJJ" secondAttribute="baseline" id="qle-Wm-RBE"/>
+                            <constraint firstItem="kXN-Iy-UHR" firstAttribute="trailing" secondItem="GU1-Sz-fJJ" secondAttribute="trailing" id="si9-73-a3i"/>
+                            <constraint firstItem="J6N-kM-bgE" firstAttribute="top" secondItem="a60-gQ-4I1" secondAttribute="bottom" constant="7" id="xF9-T5-CGg"/>
+                            <constraint firstItem="J6N-kM-bgE" firstAttribute="leading" secondItem="kXN-Iy-UHR" secondAttribute="leading" id="ymd-V7-Z2o"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPlay" destination="r2e-Yd-kuq" id="WZQ-rN-fc8"/>
+                        <outlet property="btnRecord" destination="GU1-Sz-fJJ" id="Geo-oK-W1R"/>
+                        <outlet property="btnSave" destination="HXy-nr-VHn" id="XSY-hO-SFi"/>
+                        <outlet property="txtDate" destination="J6N-kM-bgE" id="KS9-Dk-iZo"/>
+                        <outlet property="txtName" destination="kXN-Iy-UHR" id="MSh-Pd-29J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1611" y="433"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="5ad-mz-x4E">
+            <objects>
+                <viewController id="qfz-js-pYn" customClass="MainViewController" customModule="MyVideoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cgy-qb-raf"/>
+                        <viewControllerLayoutGuide type="bottom" id="GuE-sZ-BO2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RPI-fw-Ycf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tl-zR-hUy">
+                                <rect key="frame" x="275" y="285" width="50" height="30"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ode-SV-f7G" kind="presentation" id="3w4-FP-Fn2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4tl-zR-hUy" firstAttribute="centerY" secondItem="RPI-fw-Ycf" secondAttribute="centerY" id="P7s-Ot-7Ht"/>
+                            <constraint firstItem="4tl-zR-hUy" firstAttribute="centerX" secondItem="RPI-fw-Ycf" secondAttribute="centerX" id="m9M-df-IEc"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g0b-q4-4Bl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-307" y="433"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kNp-aZ-fiU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ode-SV-f7G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3ba-IG-huX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Gyb-U0-tfI" kind="relationship" relationship="rootViewController" id="x0O-I1-RDY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o3V-h2-iG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="327" y="433"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="lfB-Hc-rQx"/>
+    </inferredMetricsTieBreakers>
+</document>
